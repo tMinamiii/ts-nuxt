@@ -1,6 +1,10 @@
 module.exports = {
   extends: [
+    'eslint:recommended',
     '@nuxtjs/eslint-config-typescript'
+  ],
+  plugins: [
+    'import'
   ],
   rules: {
     // 'typescript/no-var-requires': 'off',
