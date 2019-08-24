@@ -1,6 +1,6 @@
 # new-ts-nuxt
 
-> My finest Nuxt.js project
+> My fabulous Nuxt.js project
 
 ## Build Setup
 

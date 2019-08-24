@@ -1,12 +1,8 @@
-import NuxtConfiguration from '@nuxt/config';
-
-const config: NuxtConfiguration = {
+export default {
   mode: 'spa',
-  srcDir: 'app/',
-  modulesDir: ['./node_modules'],
   /*
-   ** Headers of the page
-   */
+  ** Headers of the page
+  */
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -14,34 +10,43 @@ const config: NuxtConfiguration = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
   },
   /*
-   ** Customize the progress-bar color
-   */
+  ** Customize the progress-bar color
+  */
   loading: { color: '#fff' },
   /*
-   ** Global CSS
-   */
-  css: [],
+  ** Global CSS
+  */
+  css: [
+  ],
   /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: [],
+  ** Plugins to load before mounting the App
+  */
+  plugins: [
+  ],
   /*
-   ** Nuxt.js dev-modules
-   */
-  devModules: [],
+  ** Nuxt.js dev-modules
+  */
+  buildModules: [
+    ['@nuxt/typescript-build', {
+      typeCheck: true,
+      ignoreNotFoundWarnings: true
+    }]
+  ],
   /*
-   ** Nuxt.js modules
-   */
+  ** Nuxt.js modules
+  */
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma'
   ],
   /*
-   ** Build configuration
-   */
+  ** Build configuration
+  */
   build: {
     postcss: {
       preset: {
@@ -51,9 +56,9 @@ const config: NuxtConfiguration = {
       }
     },
     /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx): void {}
+    ** You can extend webpack config here
+    */
+    extend(config, ctx) {
+    }
   }
 };
-export default config;

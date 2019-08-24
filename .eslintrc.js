@@ -1,31 +1,6 @@
-'use strict';
-
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    node: true,
-    jest:true,
-    es6: true
-  },
-  parser: 'vue-eslint-parser',
-  parserOptions: {
-    sourceType: 'module',
-    parser: '@typescript-eslint/parser',
-    ecmaFeature: {
-      jsx: true,
-    },
-    useJSXTextNode: true
-  },
   extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:vue/recommended',
-  ],
-  plugins: [
-    '@typescript-eslint',
-    'vue',
-    'import',
+    '@nuxtjs/eslint-config-typescript'
   ],
   rules: {
     // 'typescript/no-var-requires': 'off',
@@ -43,6 +18,7 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'require-jsdoc': 'off',
+    'require-await': 'off',
     'valid-jsdoc': 'off',
     'import/order': 'error',
     'sort-imports': 'off',
@@ -95,4 +71,4 @@ module.exports = {
       }
     ]
   }
-};
+}

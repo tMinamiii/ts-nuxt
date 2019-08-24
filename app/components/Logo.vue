@@ -8,14 +8,10 @@
 </template>
 
 <script lang="ts">
-// import { Vue } from 'nuxt-property-decorator';
-//
-// export default class extends Vue {
-// }
-import Vue from 'vue';
+import { Vue } from 'nuxt-property-decorator';
 
-export default Vue.extend({});
-
+export default class extends Vue {
+}
 </script>
 
 <style>

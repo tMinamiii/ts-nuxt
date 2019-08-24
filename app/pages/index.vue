@@ -3,10 +3,10 @@
     <div>
       <logo />
       <h1 class="title">
-        new-ts-nuxt
+        ts-nuxt
       </h1>
       <h2 class="subtitle">
-        My finest Nuxt.js project
+        My fabulous Nuxt.js project
       </h2>
       <div class="links">
         <a
@@ -41,6 +41,7 @@ export default class extends Vue {
   }
 }
 </script>
+
 <style>
 .container {
   margin: 0 auto;
@@ -52,8 +53,8 @@ export default class extends Vue {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-    Arial, sans-serif;
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
