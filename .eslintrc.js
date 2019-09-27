@@ -1,68 +1,37 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    '@nuxtjs/eslint-config-typescript'
+    '@nuxtjs/eslint-config-typescript',
+    'plugin:prettier/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+    'prettier/vue'
   ],
   plugins: [
+    'prettier',
     'import'
   ],
   rules: {
-    // 'typescript/no-var-requires': 'off',
-    //フォーマットが壊れる要調査 0にして無視する
-    'indent': 'off',
-    '@typescript-eslint/indent': ['error', 2],
-    // '@typescript-eslint/explicit-member-accessibility': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
+    // typescript
     '@typescript-eslint/adjacent-overload-signatures': 'off',
-    'space-before-function-paren': ['error', {
-      'anonymous': 'never',
-      'named': 'never',
-      'asyncArrow': 'always'
-    }],
+
+    // vue.js
+    'vue/component-name-in-template-casing': 'off',
+
+    // import
+    'import/order': 'error',
+    'import/newline-after-import': [ 'error', {
+        count: 1
+      }
+    ],
+
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'require-jsdoc': 'off',
     'require-await': 'off',
     'valid-jsdoc': 'off',
-    'import/order': 'error',
     'sort-imports': 'off',
-    'vue/singleline-html-element-content-newline': 'off',
-    'vue/component-name-in-template-casing': 'off',
-    'vue/html-closing-bracket-newline': [ 'error', {
-        singleline: 'never',
-        multiline: 'always'
-      }
-    ],
-    'vue/max-attributes-per-line': [ 'error', {
-        singleline: 1,
-        multiline: { max: 1, allowFirstLine: false }
-      }
-    ],
-    'vue/html-self-closing': [ 'error', {
-        html: { void: 'any' }
-      }
-    ],
-    'vue/html-indent': [ 'error', 2, {
-        attribute: 1,
-        baseIndent: 1,
-        closeBracket: 0,
-        alignAttributesVertically: true,
-        ignores: []
-      }
-    ],
-    'import/newline-after-import': [ 'error', {
-        count: 1
-      }
-    ],
-    'no-spaced-func': 'error',
     'prefer-const': 'error', // 再代入がない限り const を強制
-    'semi-spacing': [ 'error', {
-        after: true,
-        before: false
-      }
-    ],
-    'semi-style': ['error', 'last'],
-    semi: ['error', 'always'], // 末尾セミコロンを強制
     strict: 'off', // strict 強制を緩和
     'max-len': [ 'error', {
         code: 120,
@@ -76,17 +45,17 @@ module.exports = {
     ],
 
     // prettierの設定↓
-    // 'prettier/prettier': [
-    //   'error',
-    //   {
-    //     printWidth: 120,
-    //     tabWidth: 2,
-    //     semi: true,
-    //     singleQuote: true,
-    //     trailingComma: 'es5',
-    //     bracketSpacing: true,
-    //     useTabs: false
-    //   }
-    // ],
+    'prettier/prettier': [
+      'error',
+      {
+        printWidth: 120,
+        tabWidth: 2,
+        semi: true,
+        singleQuote: true,
+        trailingComma: 'es5',
+        bracketSpacing: true,
+        useTabs: false
+      }
+    ],
   }
 }
