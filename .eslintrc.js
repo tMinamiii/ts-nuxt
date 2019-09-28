@@ -5,12 +5,9 @@ module.exports = {
     'plugin:prettier/recommended',
     'prettier',
     'prettier/@typescript-eslint',
-    'prettier/vue'
+    'prettier/vue',
   ],
-  plugins: [
-    'prettier',
-    'import'
-  ],
+  plugins: ['prettier', 'import'],
   rules: {
     // typescript
     '@typescript-eslint/adjacent-overload-signatures': 'off',
@@ -20,9 +17,11 @@ module.exports = {
 
     // import
     'import/order': 'error',
-    'import/newline-after-import': [ 'error', {
-        count: 1
-      }
+    'import/newline-after-import': [
+      'error',
+      {
+        count: 1,
+      },
     ],
 
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
@@ -33,18 +32,17 @@ module.exports = {
     'sort-imports': 'off',
     'prefer-const': 'error', // 再代入がない限り const を強制
     strict: 'off', // strict 強制を緩和
-    'max-len': [ 'error', {
-        code: 120,
-        tabWidth: 2,
-        ignoreTrailingComments: true,
-        ignoreUrls: true,
-        ignoreStrings: true,
-        ignoreTemplateLiterals: true,
-        ignoreRegExpLiterals: true
-      }
-    ],
-
-    // prettierの設定↓
+    // 'max-len': ['error', {
+    //   code: 80,
+    //   tabWidth: 2,
+    //   ignoreTrailingComments: true,
+    //   ignoreUrls: true,
+    //   ignoreStrings: true,
+    //   ignoreTemplateLiterals: true,
+    //   ignoreRegExpLiterals: true
+    // }
+    // ],
+    // prettierの設定
     'prettier/prettier': [
       'error',
       {
@@ -52,10 +50,10 @@ module.exports = {
         tabWidth: 2,
         semi: true,
         singleQuote: true,
-        trailingComma: 'es5',
+        trailingComma: 'all',
         bracketSpacing: true,
-        useTabs: false
-      }
+        useTabs: false,
+      },
     ],
-  }
-}
+  },
+};
