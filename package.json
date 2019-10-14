@@ -33,23 +33,23 @@
     ]
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^0.1.7",
-    "@nuxtjs/bulma": "^1.2.4",
-    "nuxt": "^2.9.2"
+    "@nuxt/typescript-runtime": "^0.2.1",
+    "@nuxtjs/bulma": "^1.2.5",
+    "nuxt": "^2.10.1"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.2.10",
+    "@nuxt/typescript-build": "^0.3.1",
     "@nuxtjs/eslint-config-typescript": "^0.1.3",
     "@types/jest": "^24.0.18",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-jest": "^24.9.0",
-    "eslint": "^6.4.0",
-    "eslint-config-prettier": "^6.3.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.1",
-    "husky": "^3.0.5",
+    "husky": "^3.0.9",
     "jest": "^24.9.0",
-    "lint-staged": "^9.4.0",
+    "lint-staged": "^9.4.2",
     "nuxt-property-decorator": "^2.4.0",
     "prettier": "^1.18.2",
     "vue-jest": "^4.0.0-0",
